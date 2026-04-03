@@ -1,7 +1,15 @@
-# InnerCollider
-**Double-sided mesh collision baking for Unity — editor tool + runtime component.**
+<p align="center">
+  <img src="Documentation/icon.png" width="80" alt="InnerCollider logo"/>
+</p>
+
+<h1 align="center">InnerCollider</h1>
+<p align="center"><strong>Double-sided mesh collision baking for Unity — editor tool + runtime component.</strong></p>
 
 Unity's `MeshCollider` only detects contact on the outward-facing side of a mesh. For vent tunnels, hollow pipes, concave walkable surfaces, or any geometry where a body can be *inside* the mesh, that means either manually placing proxy colliders by hand or shipping invisible geometry just for physics. InnerCollider eliminates both workarounds.
+
+<p align="center">
+  <img src="Documentation/showcase.png" alt="Double-sided mesh collider applied to a room mesh in Unity scene view" width="680"/>
+</p>
 
 ---
 
@@ -15,6 +23,10 @@ The baked asset is written to disk and referenced by a `DoubleSidedMeshCollider`
 
 ## Features
 
+<table>
+<tr>
+<td valign="top" width="60%">
+
 - **One-click bake** — select any GameObject(s) with a `MeshCollider`, open `Tools → InnerCollider` (`Ctrl+Shift+M`), bake. Works on multi-selection.
 - **Child traversal** — optionally include children in a single pass. Useful for compound objects or prefabs with nested geometry.
 - **Full Undo support** — bake and revert are both registered as a single collapsed Undo group. Ctrl+Z works as expected.
@@ -24,6 +36,13 @@ The baked asset is written to disk and referenced by a `DoubleSidedMeshCollider`
 - **Triangle budget display** — the tool window shows original, current, and projected triangle counts per collider, colour-coded against configurable warn/error thresholds.
 - **Configurable save folder** — baked assets can be written to any project folder. Falls back to beside the source mesh, then `Assets/GeneratedColliders`.
 - **Safe cleanup** — revert deletes the baked asset by stored path. If the path is stale, it searches only the configured MCT folder by exact mesh name — never a project-wide delete.
+
+</td>
+<td valign="top" align="center" width="40%">
+  <img src="Documentation/editor.png" alt="InnerCollider editor window" width="260"/>
+</td>
+</tr>
+</table>
 
 ---
 
