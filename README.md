@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Documentation/icon.png" width="80" alt="InnerCollider logo"/>
+  <img src=".github/icon.png" width="80" alt="InnerCollider logo"/>
 </p>
 
 <h1 align="center">InnerCollider</h1>
@@ -8,7 +8,7 @@
 Unity's `MeshCollider` only detects contact on the outward-facing side of a mesh. For vent tunnels, hollow pipes, concave walkable surfaces, or any geometry where a body can be *inside* the mesh, that means either manually placing proxy colliders by hand or shipping invisible geometry just for physics. InnerCollider eliminates both workarounds.
 
 <p align="center">
-  <img src="Documentation/showcase.png" alt="Double-sided mesh collider applied to a room mesh in Unity scene view" width="680"/>
+  <img src=".github/showcase.png" alt="Double-sided mesh collider applied to a room mesh in Unity scene view" width="680"/>
 </p>
 
 ---
@@ -39,7 +39,7 @@ The baked asset is written to disk and referenced by a `DoubleSidedMeshCollider`
 
 </td>
 <td valign="top" align="center" width="40%">
-  <img src="Documentation/editor.png" alt="InnerCollider editor window" width="260"/>
+  <img src=".github/editor.png" alt="InnerCollider editor window" width="260"/>
 </td>
 </tr>
 </table>
