@@ -23,26 +23,19 @@ The baked asset is written to disk and referenced by a `DoubleSidedMeshCollider`
 
 ## Features
 
-<table>
-<tr>
-<td valign="top" width="60%">
-
 - **One-click bake** — select any GameObject(s) with a `MeshCollider`, open `Tools → InnerCollider` (`Ctrl+Shift+M`), bake. Works on multi-selection.
 - **Child traversal** — optionally include children in a single pass. Useful for compound objects or prefabs with nested geometry.
-- **Full Undo support** — bake and revert are both registered as a single collapsed Undo group. Ctrl+Z works as expected.
-- **Persistent state** — the `DoubleSidedMeshCollider` component stores the original mesh reference and baked asset path. Bake once; the collider survives reloads and re-serialization.
-- **Runtime bake mode** — `applyOnStart` flag builds the double-sided mesh in memory at `Awake()` for spawned objects. No disk write; mesh lives only for that instance's lifetime.
-- **Scene-view gizmos** — selected objects with an active bake render a cyan wireframe bounds overlay and a "Double-Sided" label. Toggleable in Settings.
-- **Triangle budget display** — the tool window shows original, current, and projected triangle counts per collider, colour-coded against configurable warn/error thresholds.
-- **Configurable save folder** — baked assets can be written to any project folder. Falls back to beside the source mesh, then `Assets/GeneratedColliders`.
-- **Safe cleanup** — revert deletes the baked asset by stored path. If the path is stale, it searches only the configured MCT folder by exact mesh name — never a project-wide delete.
+- **Full Undo support** — bake and revert are registered as a single collapsed Undo group. Ctrl+Z works as expected.
+- **Persistent state** — `DoubleSidedMeshCollider` stores the original mesh reference and asset path. Bake once; state survives reloads and re-serialization.
+- **Runtime bake mode** — `applyOnStart` builds the double-sided mesh in memory at `Awake()` for spawned objects. No disk write.
+- **Scene-view gizmos** — active bakes render a cyan wireframe bounds overlay with a "Double-Sided" label. Toggleable in Settings.
+- **Triangle budget display** — original, current, and projected triangle counts per collider, colour-coded against configurable warn/error thresholds.
+- **Configurable save folder** — baked assets write to any project folder. Falls back to beside the source mesh, then `Assets/GeneratedColliders`.
+- **Safe cleanup** — revert deletes by stored path. If stale, searches only the MCT-managed folder by exact mesh name — never a project-wide delete.
 
-</td>
-<td valign="top" align="center" width="40%">
-  <img src="InnerCollider/tool.png" alt="InnerCollider editor window" width="260"/>
-</td>
-</tr>
-</table>
+<p align="center">
+  <img src="InnerCollider/tool.png" alt="InnerCollider editor window" width="520"/>
+</p>
 
 ---
 
