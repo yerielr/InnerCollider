@@ -1,5 +1,5 @@
 <p align="center">
-  <img src=".github/icon.png" width="80" alt="InnerCollider logo"/>
+  <img src="InnerCollider/Editor/icon.png" width="80" alt="InnerCollider logo"/>
 </p>
 
 <h1 align="center">InnerCollider</h1>
@@ -39,7 +39,7 @@ The baked asset is written to disk and referenced by a `DoubleSidedMeshCollider`
 
 </td>
 <td valign="top" align="center" width="40%">
-  <img src="InnerCollider/editor.png" alt="InnerCollider editor window" width="260"/>
+  <img src="InnerCollider/tool.png" alt="InnerCollider editor window" width="260"/>
 </td>
 </tr>
 </table>
